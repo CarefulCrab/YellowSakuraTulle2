@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copy and Close</title>
+  <script>
+    window.onload = function() {
+      // Copy text to clipboard
+      const outfitName = "Yellow Sakura Tulle"; // Replace with your outfit name 
+      const tempInput = document.createElement("input");
+      tempInput.value = outfitName;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+
+      // Close the window after copying
+      window.close();
+    };
+  </script>
+</head>
+<body>
+  <p>Outfit: Your Outfit Name</p> <!-- Optional, for display purposes -->
+</body>
+</html>
